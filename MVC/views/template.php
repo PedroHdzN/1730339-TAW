@@ -9,9 +9,9 @@
 			position:relative;
 			margin:auto;
 			text-align:center;
-			padding:5px;	
+			padding:5px;
             }
-            
+
             nav{
                 position:relative;
                 margin:auto;
@@ -47,17 +47,17 @@
 </head>
 <body>
 	<header><h1>Bienvenidos a la práctica no. 1</h1></header>
-		<?php 
+		<?php
 		//incluir el menú de navegación
 		include "navegacion.php"
 		 ?>
 		 <section>
 		 	<!--contenedor donde se muestran las opciones del sistemaa -->
 
-		 	<?php 
+		 	<?php
 
 		 	$mvc = new MvcController();
-		 	$mvc -> enlacePaginasController();
+		 	$mvc -> enlacesPaginasController();
 		 	 ?>
 
 		 </section>
