@@ -72,6 +72,44 @@ public function registroUsuarioController(){
               </tr>';
               }
             }
+            //Método Editar Usuarios
+            public function editarUsuarioController(){
+              //solicitar el id del usuario a editar
+              $datosController = &_GET["id"];
+              //Enviamos al modelo el id para hacer la consulta y obtener sus Datos
+              $respuesta = Datos::editarUsuarioModel($datosController, "usuarios");
+
+              //Recibimos respuesta del modelo e IMPRIMOS UN FORM PARA Editar
+              echo '<input type="hidden" value="'.$respuesta["id"].'" name="idEditar"> 
+              <input type="text" value="'.$respuesta["usuario"].'" name="usuarioEditar" required> 
+              <input type="hidden" value="'.$respuesta["password"].'" name="passwordEditar" required> 
+              <input type="hidden" value="'.$respuesta["email"].'" name="emailEditar" required> 
+              <input type="submit" value="Actualizar">';
+
+
+
+            }   
+
+            //Método para actualizar usuario
+            public function actualizarUsuarioController(){
+              if(isset($_POST["usuarioEditar"])){
+                //preparamos un array con los id de el form controlador anterior para ejecutar
+                //la actulización en un modelo
+                $datosController=array("id"=>$_POST["idEditar"],
+                                        "usuario"=>$_POST["usuarioEditar"],
+                                          "password"=>$_POST["passwordEditar"],
+                                            "email"=>$_POST["emailEditar"]);
+                //Enviar el array a el modelo que generará el UPDATE
+                $respuesta=Datos::actualizarUsuarioModel($datosController,usuarios);
+
+                 if($respuesta=="success"){
+                        header("location:index.php?action=cambio");
+                   }else{
+                    echo"error";
+                        }
+         }
+                }
+            //revisar esta parte del codigo (llaves)
           }
 
 
