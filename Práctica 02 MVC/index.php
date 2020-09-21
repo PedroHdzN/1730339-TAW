@@ -1,6 +1,6 @@
 <?php
 	//invoca al controlador y modelo solicitado
-		require_once "controllers/enlaces.php";
+		require_once "model/enlaces.php";
 	require_once "controllers/controller.php";
 	require_once "models/crud.php";
 

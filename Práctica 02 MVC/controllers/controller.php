@@ -80,15 +80,15 @@ public function registroUsuarioController(){
               $respuesta = Datos::editarUsuarioModel($datosController, "usuarios");
 
               //Recibimos respuesta del modelo e IMPRIMOS UN FORM PARA Editar
-              echo '<input type="hidden" value="'.$respuesta["id"].'" name="idEditar"> 
-              <input type="text" value="'.$respuesta["usuario"].'" name="usuarioEditar" required> 
-              <input type="hidden" value="'.$respuesta["password"].'" name="passwordEditar" required> 
-              <input type="hidden" value="'.$respuesta["email"].'" name="emailEditar" required> 
+              echo '<input type="hidden" value="'.$respuesta["id"].'" name="idEditar">
+              <input type="text" value="'.$respuesta["usuario"].'" name="usuarioEditar" required>
+              <input type="hidden" value="'.$respuesta["password"].'" name="passwordEditar" required>
+              <input type="hidden" value="'.$respuesta["email"].'" name="emailEditar" required>
               <input type="submit" value="Actualizar">';
 
 
 
-            }   
+            }
 
             //Método para actualizar usuario
             public function actualizarUsuarioController(){
@@ -107,10 +107,20 @@ public function registroUsuarioController(){
                    }else{
                     echo"error";
                         }
-         }
+                    }
                 }
-            //revisar esta parte del codigo (llaves)
-          }
+
+                public function borrarUsuarioController(){
+                  if(isset($_GET["idBorrar"])){
+                    $datosController = $_GET}[""]
+
+
+                  }
+                }
+
+
+
+      }
 
 
 ?>
