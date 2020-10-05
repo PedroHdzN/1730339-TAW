@@ -1,6 +1,6 @@
 <?php
 	class MvcController {
-		
+
 
 		//Método para llamar a la plantilla templete
 		public function plantilla () {
@@ -25,8 +25,8 @@
 			if(isset($_POST["usuarioRegistro"])) {
 
 				//Almaceno en un array los valores de la vista de registro
-				$datosController = array("usuario" => $_POST["usuarioRegistro"], 
-										"password" => $_POST["passwordRegistro"], 
+				$datosController = array("usuario" => $_POST["usuarioRegistro"],
+										"password" => $_POST["passwordRegistro"],
 										"email" => $_POST["emailRegistro"]);
 
 				//Enviamos los parametros al modelo para que procese el registro
@@ -84,7 +84,7 @@
 
 					<!-- COLUMNA PARA BORRAR -->
 					<td><a href="index.php?action=usuarios&idBorrar='.$item["id"].'"><button> ELIMINAR </button></a></td>
-				</tr>';	
+				</tr>';
 			}
 		}
 
@@ -102,7 +102,7 @@
 
 					<!-- COLUMNA PARA BORRAR -->
 					<td><a href="index.php?action=usuarios&idBorrar='.$item["id_carrera"].'"><button> ELIMINAR </button></a></td>
-				</tr>';	
+				</tr>';
 			}
 		}
 
@@ -121,7 +121,7 @@
 
 					<!-- COLUMNA PARA BORRAR -->
 					<td><a href="index.php?action=usuarios&idBorrar='.$item["id_mat"].'"><button> ELIMINAR </button></a></td>
-				</tr>';	
+				</tr>';
 			}
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////
