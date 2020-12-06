@@ -1,8 +1,8 @@
 <?php
-$hostname = 'mysql.webcindario.com';
-$database = 'instateam';
-$username = 'instateam';
-$password = 'Rendon123';
+$hostname = 'www.softwareatyourscope.me/phpmyadmin/';
+$database = 'DataBase';
+$username = 'pedro';
+$password = 'pedro';
 
 $conexion = new mysqli($hostname,$username,$password,$database);
 if($conexion->connect_errno){
